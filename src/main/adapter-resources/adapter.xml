@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Licensed Materials - Property of IBM
+	5725-I43 (C) Copyright IBM Corp. 2011, 2016. All Rights Reserved.
+	US Government Users Restricted Rights - Use, duplication or
+	disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<mfp:adapter name="Creditos"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mfp="http://www.ibm.com/mfp/integration"
+	xmlns:http="http://www.ibm.com/mfp/integration/http">
+
+	<displayName>BCR Comercial APP - Creditos</displayName>
+	<description>BCR Comercial APP</description>
+
+	<JAXRSApplicationClass>BCR.APP.Comercial.Creditos.CreditosApplication</JAXRSApplicationClass>
+
+	<property name="ErrorGeneralCode" displayName="Código error general" description="Valor de código de error" defaultValue="99" />
+	<property name="ErrorGeneralMessage" displayName="Mensaje de error general"	description="Valor del mensaje de error" defaultValue="Ha ocurrido un error, por favor intentelo de nuevo, si el problema persiste favor comunicarse con servicio al cliente" />	    
+	<property name="ModoDebug" displayName="Adaptador en MODO DEBUG" description="" defaultValue="false" />
+	<property name="Host" displayName="Host del servicio Restful" description="Formato:SERVER:PORT/Directorio Virtual" defaultValue="172.26.33.47:12001" />
+	<property name="TimeOut" displayName="Timeout de los servicios" description="Valor en segundos del timeout que el adaptador va a utilizar al llamar a un servicio" defaultValue="45" />
+	
+	
+	<!-- Master Logger -->
+	<property name="LoggerType" displayName="MasterLogger - Tipo de escritura" description="Tipos de Log - INTERFACES,PARAMETROS,DEBUG,ERROR" defaultValue="PARAMETROS,ERROR" />
+	<property name="LoggerOption" displayName="MasterLogger - Modo de escritura MasterLogger(LOG) / MobileFirst(MF) " description="Tipos - LOG,MF" defaultValue="LOG,MF" />
+	<property name="RutaLogs" displayName="MasterLogger - Ruta archivo" description="Esta es la ruta donde se almacenara el archivo log " defaultValue="Logs/" />
+
+</mfp:adapter>
